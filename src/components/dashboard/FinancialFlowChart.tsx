@@ -24,7 +24,10 @@ export default function FinancialFlowChart() {
             const monthName = new Intl.DateTimeFormat('pt-BR', { month: 'short' }).format(date);
             const monthKey = date.toISOString().slice(0, 7); // YYYY-MM
 
-            const monthTransactions = transactions.filter(t => t.date.startsWith(monthKey));
+            const monthTransactions = transactions.filter(t => {
+                const tDate = new Date(t.date);
+                return tDate.toISOString().startsWith(monthKey);
+            });
 
             const income = monthTransactions
                 .filter(t => t.type === 'income')
