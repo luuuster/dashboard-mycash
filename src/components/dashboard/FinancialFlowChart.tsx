@@ -38,8 +38,8 @@ export default function FinancialFlowChart() {
     }, [transactions]);
 
     return (
-        <div className="bg-surface border border-border rounded-[32px] p-8 flex flex-col gap-6 shadow-sm">
-            <div className="flex items-center justify-between">
+        <div className="bg-surface border border-border rounded-[24px] md:rounded-[32px] p-6 md:p-8 flex flex-col gap-6 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h2 className="text-xl font-bold text-text-primary">Fluxo Financeiro</h2>
                     <p className="text-sm text-text-secondary">Comparativo mensal de receitas e despesas</p>

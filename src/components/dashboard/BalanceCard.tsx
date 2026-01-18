@@ -14,21 +14,19 @@ export default function BalanceCard({ amount, growth }: BalanceCardProps) {
     };
 
     return (
-        <div className="relative bg-[#0F172A] rounded-[32px] p-8 overflow-hidden flex flex-col justify-between min-h-[200px] shadow-xl border border-white/5 group hover:scale-[1.01] transition-transform duration-300">
-            {/* Decorative Blur Circle - Adjusted for Lime 500 */}
-            <div className="absolute -top-32 -right-32 w-80 h-80 bg-lime-500/20 blur-[100px] rounded-full pointer-events-none group-hover:bg-lime-500/30 transition-all duration-500" />
+        <div className="relative bg-[#111827] rounded-[24px] md:rounded-[32px] p-6 md:p-8 overflow-hidden flex flex-col justify-between min-h-[180px] md:min-h-[220px] shadow-xl group hover:scale-[1.01] transition-transform duration-300">
 
             <div className="relative z-10">
-                <span className="text-gray-400 text-sm font-medium">Saldo Total</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mt-1 tracking-tight">
+                <span className="text-gray-400 text-xs md:text-sm font-medium tracking-wide">Saldo Total</span>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-2 tracking-tight">
                     {formatCurrency(animatedAmount)}
                 </h2>
             </div>
 
             <div className="relative z-10 mt-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/10">
-                    <TrendingUp size={16} className="text-primary" />
-                    <span className="text-sm font-medium text-white">+{growth}% esse mês</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1F2937] rounded-full border border-white/5">
+                    <TrendingUp size={14} className="text-lime-500" />
+                    <span className="text-xs font-bold text-white">+12% esse mês</span>
                 </div>
             </div>
         </div>

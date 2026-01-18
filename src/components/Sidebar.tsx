@@ -20,27 +20,27 @@ export default function Sidebar() {
 
     return (
         <aside
-            className={`hidden lg:flex lg:flex-col lg:justify-between lg:h-screen lg:sticky lg:top-0 bg-surface border-r border-border transition-all duration-300 ease-in-out relative ${isExpanded ? 'lg:w-[300px]' : 'lg:w-[88px]'
+            className={`hidden lg:flex lg:flex-col lg:justify-between lg:h-screen lg:sticky lg:top-0 bg-surface border-r border-border transition-all duration-300 ease-in-out relative ${isExpanded ? 'lg:w-[280px]' : 'lg:w-[88px]'
                 }`}
         >
             {/* Toggle Button */}
             <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="absolute -right-4 top-8 w-8 h-8 bg-surface border border-border rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 transition-all duration-200 z-10"
+                className="absolute -right-4 top-9 w-8 h-8 bg-surface border border-border rounded-full flex items-center justify-center shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 z-10 text-text-secondary"
                 aria-label={isExpanded ? 'Colapsar sidebar' : 'Expandir sidebar'}
             >
                 {isExpanded ? (
-                    <ChevronLeft size={16} className="text-text-secondary" />
+                    <ChevronLeft size={16} />
                 ) : (
-                    <ChevronRight size={16} className="text-text-secondary" />
+                    <ChevronRight size={16} />
                 )}
             </button>
 
-            <div className={`flex flex-col gap-6 transition-all duration-300 ${isExpanded ? 'p-6' : 'p-4'}`}>
+            <div className={`flex flex-col gap-8 transition-all duration-300 ${isExpanded ? 'p-6' : 'p-4'}`}>
                 {/* Logo */}
-                <div className={`flex items-center gap-3 transition-all duration-300 ${isExpanded ? '' : 'justify-center'}`}>
-                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <LayoutGrid size={24} className="text-primary" />
+                <div className={`flex items-center gap-3 h-12 transition-all duration-300 ${isExpanded ? '' : 'justify-center'}`}>
+                    <div className="w-10 h-10 bg-[#E5F9C6] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <LayoutGrid size={22} className="text-[#4D7C0F]" />
                     </div>
                     <span
                         className={`text-xl font-bold text-text-primary whitespace-nowrap transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px] translate-x-0' : 'opacity-0 max-w-0 -translate-x-4 overflow-hidden'
@@ -51,7 +51,7 @@ export default function Sidebar() {
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex flex-col gap-3">
+                <nav className="flex flex-col gap-2">
                     {navItems.map((item) => {
                         const Icon = item.icon;
                         return (
@@ -59,19 +59,14 @@ export default function Sidebar() {
                                 <NavLink
                                     to={item.path}
                                     end={item.path === '/'}
-                                    className={({ isActive }) => `flex items-center ${isExpanded ? 'gap-4 px-4' : 'justify-center'} py-3 rounded-xl font-medium transition-all duration-200 group relative overflow-hidden ${isActive
-                                        ? 'bg-lime-400/20 text-lime-700 shadow-sm'
+                                    className={({ isActive }) => `flex items-center ${isExpanded ? 'gap-3 px-4' : 'justify-center'} py-3.5 rounded-2xl font-medium transition-all duration-200 group relative overflow-hidden ${isActive
+                                        ? 'bg-[#E5F9C6] text-[#365314]'
                                         : 'text-text-secondary hover:bg-gray-50 hover:text-text-primary'
                                         }`}
                                 >
                                     {({ isActive }) => (
                                         <>
-                                            {/* Active Indicator Line for Collapsed State */}
-                                            {isActive && !isExpanded && (
-                                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary rounded-r-full" />
-                                            )}
-
-                                            <Icon size={24} className={`${isActive ? 'text-lime-600' : 'transition-colors'} flex-shrink-0`} />
+                                            <Icon size={22} className={`${isActive ? 'text-[#4D7C0F]' : 'transition-colors'} flex-shrink-0`} />
                                             <span
                                                 className={`whitespace-nowrap transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px] translate-x-0' : 'opacity-0 max-w-0 -translate-x-4 overflow-hidden'
                                                     }`}
@@ -84,7 +79,7 @@ export default function Sidebar() {
 
                                 {/* Tooltip quando colapsada */}
                                 {!isExpanded && (
-                                    <div className="absolute left-full ml-2 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap pointer-events-none z-50">
+                                    <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap pointer-events-none z-50 shadow-xl">
                                         {item.label}
                                         <div className="absolute right-full top-1/2 -translate-y-1/2 border-4 border-transparent border-r-gray-900"></div>
                                     </div>
@@ -96,26 +91,25 @@ export default function Sidebar() {
             </div>
 
             {/* User Profile */}
-            <div className={`pt-6 border-t border-border transition-all duration-300 ${isExpanded ? 'p-6' : 'p-4'}`}>
-                <div className={`flex items-center gap-3 ${isExpanded ? '' : 'flex-col'}`}>
+            <div className={`mb-6 mx-4 transition-all duration-300`}>
+                <div className={`flex items-center gap-3 p-3 rounded-2xl border border-border bg-gray-50/50 ${isExpanded ? '' : 'justify-center border-0 bg-transparent p-0'}`}>
                     <img
-                        src="https://ui-avatars.com/api/?name=Franklin+V&background=random"
+                        src="https://ui-avatars.com/api/?name=Franklin+V&background=F97316&color=fff"
                         alt="User"
-                        className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                        className="w-10 h-10 rounded-full object-cover flex-shrink-0 border-2 border-white shadow-sm"
                     />
                     <div
-                        className={`flex-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px] translate-x-0' : 'opacity-0 max-w-0 -translate-x-4 h-0'
+                        className={`flex-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px]' : 'opacity-0 max-w-0 h-0 hidden'
                             }`}
                     >
-                        <p className="text-sm font-semibold text-text-primary whitespace-nowrap">Franklin Vieira</p>
-                        <p className="text-xs text-text-secondary truncate">frank@example.com</p>
+                        <p className="text-sm font-bold text-text-primary whitespace-nowrap leading-tight">Franklin Vieira</p>
+                        <p className="text-[11px] text-text-secondary truncate">frank@example.com</p>
                     </div>
                     <button
-                        className={`p-1 text-text-secondary hover:text-red-500 transition-colors ${isExpanded ? '' : 'mt-2'
-                            }`}
+                        className={`text-text-secondary hover:text-red-500 transition-colors ${isExpanded ? 'p-1' : 'hidden'}`}
                         aria-label="Sair"
                     >
-                        <LogOut size={16} />
+                        <LogOut size={18} />
                     </button>
                 </div>
             </div>
