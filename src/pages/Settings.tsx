@@ -1,9 +1,38 @@
-import { User, Moon, Trash2, Bell, Shield, LogOut } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { User, Moon, Trash2, Bell, Shield, LogOut, Camera } from 'lucide-react';
 import { useFinance } from '../contexts/FinanceContext';
+import { supabase } from '../lib/supabase';
+import { useNavigate } from 'react-router-dom';
 
 export default function Settings() {
     const { familyMembers } = useFinance();
-    const currentUser = familyMembers[0]; // Mock user logged in
+    const navigate = useNavigate();
+
+    // Auth State
+    const [user, setUser] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const getUser = async () => {
+            const { data: { user } } = await supabase.auth.getUser();
+            setUser(user);
+            setLoading(false);
+        };
+        getUser();
+    }, []);
+
+    // Derived State
+    const currentMember = familyMembers.find(m => m.id === user?.id);
+    const displayName = currentMember?.name || user?.user_metadata?.full_name || '';
+    const displayEmail = user?.email || '';
+    const displayAvatar = currentMember?.avatarUrl || `https://ui-avatars.com/api/?name=${displayName || 'User'}&background=random`;
+
+    const handleLogout = async () => {
+        await supabase.auth.signOut();
+        navigate('/login');
+    };
+
+    if (loading) return <div className="p-8 text-center text-text-secondary">Carregando perfil...</div>;
 
     return (
         <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8 flex flex-col gap-8">
@@ -16,45 +45,56 @@ export default function Settings() {
                 {/* Perfil */}
                 <section className="bg-surface rounded-2xl border border-border overflow-hidden">
                     <div className="p-6 border-b border-border">
-                        <h2 className="text-lg font-semibold flex items-center gap-2">
+                        <h2 className="text-lg font-semibold flex items-center gap-2 text-text-primary">
                             <User size={20} className="text-primary" />
                             Perfil do Usuário
                         </h2>
                     </div>
-                    <div className="p-6 flex flex-col sm:flex-row items-center gap-6">
-                        <div className="relative group cursor-pointer">
-                            <img
-                                src={currentUser?.avatarUrl}
-                                alt="Avatar"
-                                className="w-24 h-24 rounded-full object-cover border-4 border-background shadow-md"
-                            />
+                    <div className="p-6 flex flex-col sm:flex-row items-center gap-8">
+                        {/* Avatar Section */}
+                        <div className="relative group cursor-pointer shrink-0">
+                            <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-surface shadow-lg ring-2 ring-border">
+                                <img
+                                    src={displayAvatar}
+                                    alt={displayName}
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = 'https://ui-avatars.com/api/?name=User&background=random';
+                                    }}
+                                />
+                            </div>
                             <div className="absolute inset-0 bg-black/40 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-white text-xs font-medium">Alterar</span>
+                                <Camera className="text-white" size={24} />
                             </div>
                         </div>
-                        <div className="flex-1 text-center sm:text-left space-y-4 w-full">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        {/* Fields Section */}
+                        <div className="flex-1 space-y-4 w-full">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-text-secondary mb-1">Nome</label>
+                                    <label className="block text-sm font-medium text-text-secondary mb-1.5">Nome Completo</label>
                                     <input
                                         type="text"
-                                        defaultValue={currentUser?.name}
-                                        className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-text-primary"
+                                        defaultValue={displayName}
+                                        className="w-full px-4 py-2.5 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 text-text-primary transition-all"
+                                        placeholder="Seu nome"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-text-secondary mb-1">Email</label>
+                                    <label className="block text-sm font-medium text-text-secondary mb-1.5">Email</label>
                                     <input
                                         type="email"
-                                        defaultValue="frank@example.com"
-                                        className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-text-primary"
+                                        value={displayEmail}
+                                        disabled
+                                        className="w-full px-4 py-2.5 bg-gray-50/50 border border-border rounded-xl text-text-secondary cursor-not-allowed"
+                                        title="O email não pode ser alterado"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="px-6 py-4 bg-gray-50 flex justify-end">
-                        <button className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-lime-600 transition-colors font-medium text-sm">
+                    <div className="px-6 py-4 bg-gray-50/50 border-t border-border flex justify-end">
+                        <button className="px-6 py-2.5 bg-primary hover:bg-primary-hover text-surface-900 rounded-xl transition-all font-bold text-sm shadow-sm hover:shadow-md active:scale-95">
                             Salvar Alterações
                         </button>
                     </div>
@@ -63,19 +103,19 @@ export default function Settings() {
                 {/* Preferências */}
                 <section className="bg-surface rounded-2xl border border-border overflow-hidden">
                     <div className="p-6 border-b border-border">
-                        <h2 className="text-lg font-semibold flex items-center gap-2">
+                        <h2 className="text-lg font-semibold flex items-center gap-2 text-text-primary">
                             <Shield size={20} className="text-blue-500" />
                             Preferências do Sistema
                         </h2>
                     </div>
                     <div className="p-6 divide-y divide-border">
                         <div className="flex items-center justify-between py-4 first:pt-0">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-gray-100 rounded-lg text-gray-600">
+                            <div className="flex items-center gap-4">
+                                <div className="p-3 bg-gray-100 rounded-xl text-gray-600">
                                     <Moon size={20} />
                                 </div>
                                 <div>
-                                    <p className="font-medium text-text-primary">Modo Escuro</p>
+                                    <p className="font-bold text-text-primary">Modo Escuro</p>
                                     <p className="text-sm text-text-secondary">Alternar entre tema claro e escuro</p>
                                 </div>
                             </div>
@@ -85,12 +125,12 @@ export default function Settings() {
                         </div>
 
                         <div className="flex items-center justify-between py-4">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-yellow-50 rounded-lg text-yellow-600">
+                            <div className="flex items-center gap-4">
+                                <div className="p-3 bg-yellow-50 rounded-xl text-yellow-600">
                                     <Bell size={20} />
                                 </div>
                                 <div>
-                                    <p className="font-medium text-text-primary">Notificações</p>
+                                    <p className="font-bold text-text-primary">Notificações</p>
                                     <p className="text-sm text-text-secondary">Receber alertas de vencimento</p>
                                 </div>
                             </div>
@@ -103,25 +143,30 @@ export default function Settings() {
 
                 {/* Zona de Perigo */}
                 <section className="bg-surface rounded-2xl border border-red-100 overflow-hidden">
-                    <div className="p-6 border-b border-red-100 bg-red-50/50">
-                        <h2 className="text-lg font-semibold flex items-center gap-2 text-red-700">
+                    <div className="p-6 border-b border-red-100 bg-red-50/30">
+                        <h2 className="text-lg font-semibold flex items-center gap-2 text-red-600">
                             <Trash2 size={20} />
                             Zona de Perigo
                         </h2>
                     </div>
-                    <div className="p-6 flex items-center justify-between">
+                    <div className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div>
-                            <p className="font-medium text-text-primary">Limpar todos os dados</p>
-                            <p className="text-sm text-text-secondary">Esta ação não pode ser desfeita. Todos os dados serão apagados.</p>
+                            <p className="font-bold text-text-primary">Limpar todos os dados</p>
+                            <p className="text-sm text-text-secondary mt-1">
+                                Esta ação não pode ser desfeita. Todos os dados serão apagados permanentemente.
+                            </p>
                         </div>
-                        <button className="px-4 py-2 border border-red-200 text-red-600 rounded-lg hover:bg-red-50 transition-colors font-medium text-sm">
+                        <button className="whitespace-nowrap px-4 py-2 border border-red-200 text-red-600 rounded-xl hover:bg-red-50 transition-colors font-bold text-sm">
                             Resetar Dados
                         </button>
                     </div>
                 </section>
 
-                <div className="flex justify-center pt-8">
-                    <button className="flex items-center gap-2 text-text-secondary hover:text-red-500 transition-colors">
+                <div className="flex justify-center pt-4">
+                    <button
+                        onClick={handleLogout}
+                        className="flex items-center gap-2 text-text-secondary hover:text-red-500 transition-colors px-4 py-2 rounded-lg hover:bg-red-50"
+                    >
                         <LogOut size={18} />
                         <span className="font-medium">Sair da Conta</span>
                     </button>
