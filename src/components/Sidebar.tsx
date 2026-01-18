@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Home, CreditCard, LayoutGrid, Users, Settings, LogOut, ChevronLeft, ChevronRight } from 'lucide-react';
+import { supabase } from '../lib/supabase';
+import { useFinance } from '../contexts/FinanceContext';
 
 interface NavItem {
     icon: typeof Home;
@@ -17,6 +19,29 @@ const navItems: NavItem[] = [
 
 export default function Sidebar() {
     const [isExpanded, setIsExpanded] = useState(true);
+    const [user, setUser] = useState<any>(null);
+    const { familyMembers } = useFinance();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const getUser = async () => {
+            const { data: { user } } = await supabase.auth.getUser();
+            setUser(user);
+        };
+        getUser();
+    }, []);
+
+    const currentMember = familyMembers.find(m => m.id === user?.id);
+    const displayName = currentMember?.name || user?.user_metadata?.full_name || 'Usuário';
+    const displayEmail = user?.email || '...';
+    // const displayAvatar = currentMember?.avatarUrl || `https://ui-avatars.com/api/?name=${displayName}&background=random`;
+    const displayAvatar = currentMember?.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=random`;
+
+
+    const handleLogout = async () => {
+        await supabase.auth.signOut();
+        navigate('/login');
+    };
 
     return (
         <aside
@@ -94,19 +119,22 @@ export default function Sidebar() {
             <div className={`mb-6 mx-4 transition-all duration-300`}>
                 <div className={`flex items-center gap-3 p-3 rounded-2xl border border-border bg-gray-50/50 ${isExpanded ? '' : 'justify-center border-0 bg-transparent p-0'}`}>
                     <img
-                        src="https://ui-avatars.com/api/?name=Franklin+V&background=F97316&color=fff"
+                        src={displayAvatar}
                         alt="User"
                         className="w-10 h-10 rounded-full object-cover flex-shrink-0 border-2 border-white shadow-sm"
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src = 'https://ui-avatars.com/api/?name=User&background=random';
+                        }}
                     />
                     <div
                         className={`flex-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px]' : 'opacity-0 max-w-0 h-0 hidden'
                             }`}
                     >
-                        <p className="text-sm font-bold text-text-primary whitespace-nowrap leading-tight">Franklin Vieira</p>
-                        <p className="text-[11px] text-text-secondary truncate">frank@example.com</p>
+                        <p className="text-sm font-bold text-text-primary whitespace-nowrap leading-tight">{displayName}</p>
+                        <p className="text-[11px] text-text-secondary truncate">{displayEmail}</p>
                     </div>
                     <button
-                        onClick={() => window.location.href = '/login'}
+                        onClick={handleLogout}
                         className={`text-text-secondary hover:text-red-500 transition-colors ${isExpanded ? 'p-1' : 'hidden'}`}
                         aria-label="Sair"
                         title="Sair"
