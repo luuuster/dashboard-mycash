@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
-import { Transaction, Goal, CreditCard, FamilyMember } from '../types/finance';
+import type { Transaction, Goal, CreditCard, FamilyMember } from '../types/finance';
 
 interface FinanceContextData {
     transactions: Transaction[];
