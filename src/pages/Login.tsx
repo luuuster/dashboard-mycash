@@ -30,6 +30,9 @@ export default function Login() {
         } catch (err: any) {
             console.error('Login error:', err);
             setError('Email ou senha incorretos.');
+            if (err.message && (err.message.includes('Invalid login') || err.message.includes('not found'))) {
+                setError('Conta não encontrada ou senha incorreta.');
+            }
         } finally {
             setLoading(false);
         }
@@ -64,6 +67,11 @@ export default function Login() {
                     {error && (
                         <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm text-center">
                             {error}
+                            {error.includes('não encontrada') && (
+                                <Link to="/register" className="block mt-2 text-[#84CC16] font-bold hover:underline">
+                                    Criar uma conta
+                                </Link>
+                            )}
                         </div>
                     )}
 
