@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import {
-    LayoutDashboard,
-    Target,
+    Home,
     CreditCard,
-    ArrowLeftRight,
-    User,
     ChevronLeft,
     ChevronRight,
-    LogOut
+    User
 } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -22,11 +19,8 @@ interface SidebarProps {
 }
 
 const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'objetivos', label: 'Objetivos', icon: Target },
+    { id: 'dashboard', label: 'Home', icon: Home },
     { id: 'cartoes', label: 'Cartões', icon: CreditCard },
-    { id: 'transacoes', label: 'Transações', icon: ArrowLeftRight },
-    { id: 'perfil', label: 'Perfil', icon: User },
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange }) => {
@@ -35,29 +29,27 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange
     return (
         <aside
             className={cn(
-                "hidden lg:flex flex-col h-screen bg-surface border-r border-border transition-all duration-300 sticky top-0",
+                "hidden lg:flex flex-col h-screen bg-white border-r border-gray-100 transition-all duration-300 sticky top-0 z-[100]",
                 isCollapsed ? "w-20" : "w-64"
             )}
         >
             {/* Logo Section */}
-            <div className="p-6 flex items-center justify-between">
+            <div className="p-8 flex items-center justify-between">
                 {!isCollapsed && (
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                            <span className="text-black font-bold">M</span>
-                        </div>
-                        <span className="text-xl font-bold tracking-tight">mycash<span className="text-primary">+</span></span>
-                    </div>
+                    <h1 className="text-3xl font-bold text-black tracking-tight">
+                        Mycash<span className="text-primary-val">+</span>
+                    </h1>
                 )}
-                {isCollapsed && (
-                    <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mx-auto">
-                        <span className="text-black font-bold">M</span>
-                    </div>
-                )}
+                <button
+                    onClick={() => setIsCollapsed(!isCollapsed)}
+                    className="p-1.5 rounded-full border border-gray-200 bg-white shadow-sm hover:bg-gray-50 transition-colors absolute -right-3.5 top-10"
+                >
+                    {isCollapsed ? <ChevronRight className="w-4 h-4 text-gray-400" /> : <ChevronLeft className="w-4 h-4 text-gray-400" />}
+                </button>
             </div>
 
             {/* Navigation Items */}
-            <nav className="flex-1 px-3 space-y-2 mt-4">
+            <nav className="flex-1 px-4 space-y-2 mt-4">
                 {menuItems.map((item) => {
                     const Icon = item.icon;
                     const isActive = activeSection === item.id;
@@ -67,24 +59,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange
                             key={item.id}
                             onClick={() => onSectionChange(item.id)}
                             className={cn(
-                                "w-full flex items-center gap-3 p-3 rounded-xl transition-all group relative",
+                                "w-full flex items-center gap-4 py-3.5 px-6 rounded-2xl transition-all group relative font-semibold",
                                 isActive
-                                    ? "bg-black text-white shadow-sm"
-                                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                                    ? "bg-primary-val text-black"
+                                    : "text-gray-400 hover:text-black hover:bg-gray-50"
                             )}
                         >
                             <Icon className={cn(
-                                "w-5 h-5 transition-colors",
-                                isActive ? "text-primary" : "group-hover:text-primary"
+                                "w-5 h-5",
+                                isActive ? "text-black" : "text-gray-400 group-hover:text-black"
                             )} />
 
                             {!isCollapsed && (
-                                <span className="font-medium">{item.label}</span>
+                                <span>{item.label}</span>
                             )}
 
-                            {/* Tooltip for collapsed state */}
                             {isCollapsed && (
-                                <div className="absolute left-16 bg-surface border border-border px-2 py-1 rounded text-xs invisible group-hover:visible whitespace-nowrap z-50">
+                                <div className="absolute left-20 bg-black text-white px-2 py-1 rounded text-xs invisible group-hover:visible whitespace-nowrap z-50">
                                     {item.label}
                                 </div>
                             )}
@@ -93,20 +84,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange
                 })}
             </nav>
 
-            {/* Footer Section */}
-            <div className="p-4 border-t border-border space-y-2">
-                <button
-                    onClick={() => setIsCollapsed(!isCollapsed)}
-                    className="w-full flex items-center gap-3 p-3 text-gray-400 hover:text-white transition-all"
-                >
-                    {isCollapsed ? <ChevronRight className="w-5 h-5" /> : <ChevronLeft className="w-5 h-5" />}
-                    {!isCollapsed && <span className="font-medium">Recolher</span>}
-                </button>
-
-                <button className="w-full flex items-center gap-3 p-3 text-gray-400 hover:text-red-500 transition-all">
-                    <LogOut className="w-5 h-5" />
-                    {!isCollapsed && <span className="font-medium">Sair</span>}
-                </button>
+            {/* User Info Section */}
+            <div className="p-6 border-t border-gray-100">
+                <div className={cn(
+                    "flex items-center gap-3",
+                    isCollapsed ? "justify-center" : ""
+                )}>
+                    <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200 overflow-hidden">
+                        <User className="w-6 h-6 text-gray-400" />
+                    </div>
+                    {!isCollapsed && (
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-bold text-black truncate">Lucas Marte</p>
+                            <p className="text-[10px] text-gray-500 truncate">lucasmarte@gmail.com</p>
+                        </div>
+                    )}
+                </div>
             </div>
         </aside>
     );

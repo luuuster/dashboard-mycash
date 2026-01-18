@@ -26,15 +26,16 @@ Este plano detalha as etapas para construir o sistema de gestão financeira fami
     - Avatar e Ações Rápidas.
 - [x] **Navigation Logic**: Sistema de rotas simples para Dashboard, Objetivos, etc.
 
-## 🔴 Fase 4: Dashboard Core Components
-- [ ] **Summary Cards**: Balanço Total, Receitas e Despesas (Layout responsivo).
-- [ ] **Family Spending Charts**: Integração com bibliotecas leves de gráficos (ex: Recharts).
-- [ ] **Transactions List**: Tabela/Lista fluida com busca inteligente integrada.
+- [x] **Fase 4: Dashboard Core Components** (Concluído)
+    - [x] Gráficos Financeiros (`FinancialChart`)
+    - [x] Grid de Cartões/Contas (`CreditCardsGrid`)
+    - [x] Lista de Próximas Despesas (`NextExpenses`)
+    - [x] Cabeçalho & Metrics Grid (`Header`, `CategoryMetricsGrid`)
 
-## 🟣 Fase 5: Funcionalidades Avançadas & Persistência
-- [ ] **Modal "Nova Transação"**: Formulário completo com validação e tipagem.
-- [ ] **Integração Supabase**: Substituir Mocks por chamadas reais via Hooks/Services.
-- [ ] **Polimento UX**: Micro-interações, estados de Loading e tratativa de erros.
+- [ ] **Fase 5: Funcionalidades Avançadas & Persistência**
+    - [x] **Modal "Nova Transação"**: Formulário completo com validação e tipagem.
+    - [x] **Global Filters Logic**: Filtragem real por período e categoria no contexto.
+    - [ ] **Initial Supabase Integration**: Setup do cliente e primeira tabela de teste.
 
 ---
 

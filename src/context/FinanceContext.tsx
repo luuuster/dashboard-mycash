@@ -18,6 +18,7 @@ interface FinanceContextData {
         income: number;
         expenses: number;
     };
+    addTransaction: (transaction: Omit<Transaction, 'id' | 'status'>) => void;
 }
 
 const FinanceContext = createContext<FinanceContextData>({} as FinanceContextData);
@@ -34,11 +35,20 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({ child
         { id: 'c2', name: 'Inter', limit: 3000, used: 800, closing_date: 10, due_date: 17, theme: 'lime' }
     ]);
 
-    const [transactions] = useState<Transaction[]>([
+    const [transactions, setTransactions] = useState<Transaction[]>([
         { id: 't1', type: 'income', value: 12450, description: 'Salário Mensal', category: 'Trabalho', date: '2024-03-01', member: 'Lucas Marte', status: 'completed' },
         { id: 't2', type: 'expense', value: 450, description: 'Supermercado', category: 'Alimentação', date: '2024-03-05', member: 'Ana Silva', status: 'completed' },
         { id: 't3', type: 'expense', value: 120.50, description: 'Netflix', category: 'Assinatura', date: '2024-03-10', member: 'Lucas Marte', status: 'pending' },
     ]);
+
+    const addTransaction = (transaction: Omit<Transaction, 'id' | 'status'>) => {
+        const newTransaction: Transaction = {
+            ...transaction,
+            id: Math.random().toString(36).substr(2, 9),
+            status: 'completed'
+        };
+        setTransactions(prev => [newTransaction, ...prev]);
+    };
 
     const [goals] = useState<Goal[]>([
         { id: 'g1', title: 'Reserva de Emergência', target_value: 20000, current_value: 15000, deadline: '2024-12-31', status: 'on_track' }
@@ -51,11 +61,26 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({ child
         search: ''
     });
 
+    const filteredTransactions = useMemo(() => {
+        return transactions.filter(t => {
+            const matchesSearch = t.description.toLowerCase().includes(filters.search.toLowerCase()) ||
+                t.category.toLowerCase().includes(filters.search.toLowerCase());
+            const matchesMember = !filters.memberId || t.member === members.find(m => m.id === filters.memberId)?.name;
+
+            // Basic date check (just month/year for now)
+            const tDate = new Date(t.date);
+            const matchesMonth = tDate.getMonth() === filters.month;
+            const matchesYear = tDate.getFullYear() === filters.year;
+
+            return matchesSearch && matchesMember && matchesMonth && matchesYear;
+        });
+    }, [transactions, filters, members]);
+
     const totals = useMemo(() => {
-        const income = transactions
+        const income = filteredTransactions
             .filter(t => t.type === 'income')
             .reduce((acc, curr) => acc + curr.value, 0);
-        const expenses = transactions
+        const expenses = filteredTransactions
             .filter(t => t.type === 'expense')
             .reduce((acc, curr) => acc + curr.value, 0);
 
@@ -64,17 +89,18 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({ child
             expenses,
             balance: income - expenses
         };
-    }, [transactions]);
+    }, [filteredTransactions]);
 
     return (
         <FinanceContext.Provider value={{
-            transactions,
+            transactions: filteredTransactions,
             goals,
             cards,
             members,
             filters,
             setFilters,
-            totals
+            totals,
+            addTransaction
         }}>
             {children}
         </FinanceContext.Provider>

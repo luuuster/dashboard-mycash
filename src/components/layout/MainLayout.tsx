@@ -10,7 +10,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     const [activeSection, setActiveSection] = useState('dashboard');
 
     return (
-        <div className="flex min-h-screen bg-background text-white selection:bg-primary selection:text-black overflow-x-hidden">
+        <div className="flex min-h-screen bg-[#F8F9FA] text-black selection:bg-primary-val selection:text-black overflow-x-hidden">
             {/* Sidebar - Desktop Only (≥1280px) */}
             <Sidebar
                 activeSection={activeSection}
@@ -25,12 +25,8 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 />
 
                 {/* Main Content Area */}
-                <main className="flex-1 w-full flex flex-col">
-                    <div className="main-container py-6 lg:py-8 flex-1 flex flex-col">
-                        <div className="content-limit w-full flex-1 flex flex-col">
-                            {children}
-                        </div>
-                    </div>
+                <main className="flex-1 w-full flex flex-col p-4 lg:p-12 overflow-y-auto">
+                    {children}
                 </main>
             </div>
         </div>

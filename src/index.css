@@ -1,25 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #BDFF00;
+  --color-background: #000000;
+  --color-surface: #121212;
+  --color-border: #2A2A2A;
+
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1920px;
+
+  --max-width-dashboard: 1400px;
+  --max-width-wide: 1600px;
+}
 
 :root {
-  /* Variáveis Primitivas */
-  --color-lime: #BDFF00;
-  --color-black: #000000;
-  --color-white: #FFFFFF;
-  --color-gray-900: #121212;
-  --color-gray-800: #2A2A2A;
-  
-  /* Variáveis Semânticas */
-  --color-primary: var(--color-lime);
-  --color-bg: var(--color-black);
-  --color-surface: var(--color-gray-900);
-  --color-border: var(--color-gray-800);
-  
-  /* Espaçamentos definidos nas regras */
-  --padding-mobile: 1rem;    /* px-4 */
-  --padding-tablet: 1.5rem;  /* px-6 */
-  --padding-desktop: 2rem;   /* px-8 */
+  /* Variáveis Semânticas para uso alternativo */
+  --color-primary-val: #BDFF00;
+  --color-bg-val: #000000;
+  --color-surface-val: #121212;
+  --color-border-val: #2A2A2A;
+  --color-dashboard-bg: #F8F9FA;
 }
 
 @layer base {
@@ -30,6 +31,7 @@
 }
 
 @layer components {
+
   /* Container Fluido Obrigatório */
   .main-container {
     @apply w-full px-4 md:px-6 lg:px-8 mx-auto;

@@ -1,41 +1,49 @@
+import { useState } from 'react';
 import { MainLayout } from './components/layout/MainLayout';
+import { Header } from './components/layout/Header';
 import { SummaryCards } from './components/finance/SummaryCards';
+import { CategoryMetricsGrid } from './components/finance/CategoryMetricsGrid';
 import { TransactionList } from './components/finance/TransactionList';
 import { FinancialChart } from './components/finance/FinancialChart';
 import { CreditCardsGrid } from './components/finance/CreditCardsGrid';
+import { NextExpenses } from './components/finance/NextExpenses';
+import { NewTransactionModal } from './components/finance/NewTransactionModal';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <MainLayout>
-      <header className="mb-8">
-        <h1 className="text-2xl lg:text-3xl font-bold">Dashboard</h1>
-        <p className="text-gray-400 mt-1 text-sm lg:text-base">Bem-vindo de volta, Lucas Marte.</p>
-      </header>
+      <Header onNewTransaction={() => setIsModalOpen(true)} />
 
-      <SummaryCards />
-
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mt-8">
-        <div className="xl:col-span-2 space-y-8">
-          <FinancialChart />
-          <TransactionList />
+      {/* Top Metrics: Circles + Summary Cards */}
+      <div className="flex flex-col xl:flex-row gap-8">
+        <div className="flex-1">
+          <CategoryMetricsGrid />
+          <SummaryCards />
         </div>
-
-        <div className="space-y-8">
+        <div className="xl:w-96">
           <CreditCardsGrid />
-
-          {/* Quick Actions / Goals Preview Placeholder */}
-          <div className="bg-primary p-6 rounded-3xl text-black">
-            <h4 className="font-bold text-lg mb-1">Meta de Economia</h4>
-            <p className="text-sm font-medium mb-4 opacity-80">Você já atingiu 75% da sua meta mensal!</p>
-            <div className="w-full bg-black/10 h-2 rounded-full overflow-hidden mb-6">
-              <div className="bg-black h-full w-3/4" />
-            </div>
-            <button className="w-full py-3 bg-black text-white rounded-xl font-bold text-sm hover:bg-black/90 transition-all">
-              Ver Objetivos
-            </button>
-          </div>
         </div>
       </div>
+
+      {/* Middle Section: Chart + Next Expenses */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mt-8">
+        <div className="xl:col-span-2">
+          <FinancialChart />
+        </div>
+        <div className="h-full">
+          <NextExpenses />
+        </div>
+      </div>
+
+      {/* Bottom Section: Transaction List */}
+      <TransactionList />
+
+      <NewTransactionModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </MainLayout>
   );
 }
