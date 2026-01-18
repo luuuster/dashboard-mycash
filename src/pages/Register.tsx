@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Eye, EyeOff, ArrowRight, Lock, Mail, User, Loader2, CheckCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 export default function Register() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [success, setSuccess] = useState(false);

@@ -112,7 +112,7 @@ export function FinanceProvider({ children }: { children: ReactNode }) {
     const uploadFile = async (file: File, bucket: 'avatars' | 'attachments') => {
         try {
             const fileName = `${Date.now()}-${file.name}`;
-            const { data, error } = await supabase.storage.from(bucket).upload(fileName, file);
+            const { error } = await supabase.storage.from(bucket).upload(fileName, file);
             if (error) throw error;
 
             const { data: { publicUrl } } = supabase.storage.from(bucket).getPublicUrl(fileName);

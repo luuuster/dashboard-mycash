@@ -117,3 +117,25 @@ create trigger handle_updated_at before update on "family_members"
 -- Since we only have created_at in the schema above, we would typically add updated_at columns first.
 -- For simplicity in this step, we will omit the trigger unless we alter tables to add updated_at.
 -- Let's stick to the core request: Storage and Access.
+
+-- [NEW] Auth Trigger to Sync User to Family Members
+-- This function will run every time a new user signs up via Supabase Auth
+create or replace function public.handle_new_user() 
+returns trigger as $$
+begin
+  insert into public.family_members (id, name, role, "avatarUrl", "monthlyIncome")
+  values (
+    new.id, 
+    new.raw_user_meta_data->>'full_name', 
+    'Membro', -- Default role
+    'https://ui-avatars.com/api/?background=random&name=' || replace(new.raw_user_meta_data->>'full_name', ' ', '+'), 
+    0
+  );
+  return new;
+end;
+$$ language plpgsql security definer;
+
+-- Trigger definition
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute procedure public.handle_new_user();
