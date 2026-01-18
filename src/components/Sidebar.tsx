@@ -1,17 +1,18 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Home, CreditCard, LayoutGrid, Users, Settings, LogOut, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface NavItem {
     icon: typeof Home;
     label: string;
-    active?: boolean;
+    path: string;
 }
 
 const navItems: NavItem[] = [
-    { icon: Home, label: 'Dashboard', active: true },
-    { icon: CreditCard, label: 'Transações' },
-    { icon: Users, label: 'Membros' },
-    { icon: Settings, label: 'Configurações' },
+    { icon: Home, label: 'Dashboard', path: '/' },
+    { icon: CreditCard, label: 'Transações', path: '/transactions' },
+    { icon: Users, label: 'Membros', path: '/members' },
+    { icon: Settings, label: 'Configurações', path: '/settings' },
 ];
 
 export default function Sidebar() {
@@ -35,14 +36,14 @@ export default function Sidebar() {
                 )}
             </button>
 
-            <div className={`flex flex-col gap-14 transition-all duration-300 ${isExpanded ? 'p-8' : 'p-4'}`}>
+            <div className={`flex flex-col gap-6 transition-all duration-300 ${isExpanded ? 'p-6' : 'p-4'}`}>
                 {/* Logo */}
                 <div className={`flex items-center gap-3 transition-all duration-300 ${isExpanded ? '' : 'justify-center'}`}>
                     <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
                         <LayoutGrid size={24} className="text-primary" />
                     </div>
                     <span
-                        className={`text-xl font-bold text-text-primary whitespace-nowrap transition-all duration-300 ${isExpanded ? 'opacity-100' : 'opacity-0 w-0 overflow-hidden'
+                        className={`text-xl font-bold text-text-primary whitespace-nowrap transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px] translate-x-0' : 'opacity-0 max-w-0 -translate-x-4 overflow-hidden'
                             }`}
                     >
                         MyCash+
@@ -55,21 +56,31 @@ export default function Sidebar() {
                         const Icon = item.icon;
                         return (
                             <div key={item.label} className="relative group">
-                                <a
-                                    href="#"
-                                    className={`flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-all duration-200 ${item.active
-                                            ? 'bg-gray-900 text-white'
-                                            : 'text-text-secondary hover:bg-gray-50'
-                                        } ${isExpanded ? '' : 'justify-center'}`}
+                                <NavLink
+                                    to={item.path}
+                                    end={item.path === '/'}
+                                    className={({ isActive }) => `flex items-center ${isExpanded ? 'gap-4 px-4' : 'justify-center'} py-3 rounded-xl font-medium transition-all duration-200 group relative overflow-hidden ${isActive
+                                        ? 'bg-lime-400/20 text-lime-700 shadow-sm'
+                                        : 'text-text-secondary hover:bg-gray-50 hover:text-text-primary'
+                                        }`}
                                 >
-                                    <Icon size={20} className={item.active ? 'text-primary' : ''} />
-                                    <span
-                                        className={`whitespace-nowrap transition-all duration-300 ${isExpanded ? 'opacity-100' : 'opacity-0 w-0 overflow-hidden'
-                                            }`}
-                                    >
-                                        {item.label}
-                                    </span>
-                                </a>
+                                    {({ isActive }) => (
+                                        <>
+                                            {/* Active Indicator Line for Collapsed State */}
+                                            {isActive && !isExpanded && (
+                                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary rounded-r-full" />
+                                            )}
+
+                                            <Icon size={24} className={`${isActive ? 'text-lime-600' : 'transition-colors'} flex-shrink-0`} />
+                                            <span
+                                                className={`whitespace-nowrap transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px] translate-x-0' : 'opacity-0 max-w-0 -translate-x-4 overflow-hidden'
+                                                    }`}
+                                            >
+                                                {item.label}
+                                            </span>
+                                        </>
+                                    )}
+                                </NavLink>
 
                                 {/* Tooltip quando colapsada */}
                                 {!isExpanded && (
@@ -85,7 +96,7 @@ export default function Sidebar() {
             </div>
 
             {/* User Profile */}
-            <div className={`pt-6 border-t border-border transition-all duration-300 ${isExpanded ? 'p-8' : 'p-4'}`}>
+            <div className={`pt-6 border-t border-border transition-all duration-300 ${isExpanded ? 'p-6' : 'p-4'}`}>
                 <div className={`flex items-center gap-3 ${isExpanded ? '' : 'flex-col'}`}>
                     <img
                         src="https://ui-avatars.com/api/?name=Franklin+V&background=random"
@@ -93,7 +104,7 @@ export default function Sidebar() {
                         className="w-10 h-10 rounded-full object-cover flex-shrink-0"
                     />
                     <div
-                        className={`flex-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100' : 'opacity-0 w-0 h-0'
+                        className={`flex-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 max-w-[200px] translate-x-0' : 'opacity-0 max-w-0 -translate-x-4 h-0'
                             }`}
                     >
                         <p className="text-sm font-semibold text-text-primary whitespace-nowrap">Franklin Vieira</p>

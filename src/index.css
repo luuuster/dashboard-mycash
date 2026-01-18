@@ -29,10 +29,6 @@
   --color-text-primary: var(--color-gray-800);
   --color-text-secondary: var(--color-gray-500);
   --color-border: var(--color-gray-200);
-
-  /* Layout */
-  --max-width-dashboard: 1400px;
-  --max-width-wide: 1600px;
 }
 
 body {
@@ -44,6 +40,14 @@ body {
 }
 
 @layer utilities {
+  .max-w-dashboard {
+    max-width: 1400px;
+  }
+
+  .max-w-wide {
+    max-width: 1600px;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -51,5 +55,14 @@ body {
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

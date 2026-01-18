@@ -22,7 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-<<<<<<< HEAD
 
 # Supabase / Env
 .env
@@ -31,5 +30,3 @@ dist-ssr
 
 # Vite
 .vite
-=======
->>>>>>> 7944a6862327ce565e5d0adb92f50e4ec2f27d69
