@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Variáveis Primitivas */
+  --color-lime: #BDFF00;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-900: #121212;
+  --color-gray-800: #2A2A2A;
+  
+  /* Variáveis Semânticas */
+  --color-primary: var(--color-lime);
+  --color-bg: var(--color-black);
+  --color-surface: var(--color-gray-900);
+  --color-border: var(--color-gray-800);
+  
+  /* Espaçamentos definidos nas regras */
+  --padding-mobile: 1rem;    /* px-4 */
+  --padding-tablet: 1.5rem;  /* px-6 */
+  --padding-desktop: 2rem;   /* px-8 */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Container Fluido Obrigatório */
+  .main-container {
+    @apply w-full px-4 md:px-6 lg:px-8 mx-auto;
+    max-width: 100%;
+  }
+
+  .content-limit {
+    @apply lg:max-w-dashboard xl:max-w-wide mx-auto;
+  }
+}
