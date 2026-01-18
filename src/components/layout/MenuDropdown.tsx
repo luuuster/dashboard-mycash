@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { LayoutGrid, X, Home, CreditCard, Users, Settings, LogOut } from 'lucide-react';
+import { X, LogOut, Home, CreditCard, Users, Settings, LayoutGrid } from 'lucide-react';
 
 interface MenuDropdownProps {
     isOpen: boolean;
@@ -52,8 +51,8 @@ export default function MenuDropdown({ isOpen, onClose, currentPath }: MenuDropd
                                     key={item.label}
                                     href="#"
                                     className={`flex items-center gap-4 px-4 py-4 rounded-xl font-medium transition-all ${isActive
-                                            ? 'bg-gray-900 text-white'
-                                            : 'text-text-secondary hover:bg-gray-50'
+                                        ? 'bg-gray-900 text-white'
+                                        : 'text-text-secondary hover:bg-gray-50'
                                         }`}
                                     onClick={() => {
                                         // Update navigation logic here

@@ -1,4 +1,4 @@
-import { Calendar, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Calendar, CheckCircle2 } from 'lucide-react';
 import { useFinance } from '../../contexts/FinanceContext';
 
 export default function UpcomingExpenses() {
@@ -53,10 +53,12 @@ export default function UpcomingExpenses() {
                 ))}
 
                 {internalTransactions.length === 0 && (
-                    <div className="flex flex-col items-center justify-center py-8 text-center bg-gray-50/50 rounded-2xl border border-dashed border-border">
-                        <AlertCircle size={32} className="text-gray-300 mb-2" />
-                        <p className="text-sm text-text-secondary font-medium">Tudo em dia!</p>
-                        <p className="text-xs text-gray-400">Nenhuma despesa pendente.</p>
+                    <div className="flex flex-col items-center justify-center py-10 text-center bg-gray-50/30 rounded-3xl border border-dashed border-border">
+                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-3 shadow-sm text-green-500">
+                            <CheckCircle2 size={24} />
+                        </div>
+                        <p className="text-sm text-text-primary font-bold">Tudo em dia!</p>
+                        <p className="text-xs text-text-secondary mt-1">Nenhuma despesa pendente para os próximos dias.</p>
                     </div>
                 )}
             </div>

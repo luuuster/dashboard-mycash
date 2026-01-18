@@ -50,8 +50,12 @@ export default function GoalsWidget() {
                 })}
 
                 {goals.length === 0 && (
-                    <div className="text-center py-8 bg-gray-50 rounded-2xl border border-dashed border-border">
-                        <p className="text-sm text-text-secondary">Nenhum objetivo definido</p>
+                    <div className="flex flex-col items-center justify-center py-10 text-center bg-gray-50/30 rounded-3xl border border-dashed border-border">
+                        <div className="text-gray-300 mb-3">
+                            <Target size={32} />
+                        </div>
+                        <p className="text-sm text-text-primary font-bold">Sem objetivos ativos</p>
+                        <p className="text-xs text-text-secondary mt-1">Defina metas para acompanhar seu progresso.</p>
                     </div>
                 )}
             </div>

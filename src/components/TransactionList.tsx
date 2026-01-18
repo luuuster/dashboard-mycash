@@ -31,7 +31,7 @@ export default function TransactionList() {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-border">
-                        {transactions.map((transaction, index) => (
+                        {transactions.map((transaction) => (
                             <tr key={transaction.id} className="hover:bg-gray-50 transition-colors">
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-text-secondary">
                                     {formatDate(transaction.date)}

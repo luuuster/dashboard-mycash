@@ -37,6 +37,13 @@ export default function CreditCardsWidget() {
                     ref={scrollRef}
                     className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth p-2 -m-2"
                 >
+                    {creditCards.length === 0 && (
+                        <div className="flex-shrink-0 w-80 h-48 rounded-[32px] bg-gray-50/50 border border-dashed border-border flex flex-col items-center justify-center text-center p-6">
+                            <p className="text-sm font-bold text-text-secondary">Nenhum cartão cadastrado</p>
+                            <p className="text-xs text-gray-400 mt-1">Adicione seu primeiro cartão para gerenciar faturas.</p>
+                        </div>
+                    )}
+
                     {creditCards.map((card) => (
                         <CreditCardItem
                             key={card.id}

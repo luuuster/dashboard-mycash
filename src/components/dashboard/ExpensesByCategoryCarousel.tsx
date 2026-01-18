@@ -10,7 +10,7 @@ export default function ExpensesByCategoryCarousel() {
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
-            const { scrollLeft, clientWidth } = scrollRef.current;
+            const { scrollLeft } = scrollRef.current;
             const scrollTo = direction === 'left' ? scrollLeft - 200 : scrollLeft + 200;
             scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
         }
