@@ -11,7 +11,7 @@ export default function GoalsWidget() {
     return (
         <div className="bg-surface border border-border rounded-[32px] p-8 flex flex-col gap-6 shadow-sm h-full">
             <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-text-primary">Objetivos</h2>
+                <h2 className="text-lg md:text-xl font-bold text-text-primary">Objetivos</h2>
                 <button className="text-primary hover:text-primary-hover font-bold text-sm flex items-center gap-1 transition-colors">
                     Novo <Target size={16} />
                 </button>

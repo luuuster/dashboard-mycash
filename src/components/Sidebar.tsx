@@ -106,8 +106,10 @@ export default function Sidebar() {
                         <p className="text-[11px] text-text-secondary truncate">frank@example.com</p>
                     </div>
                     <button
+                        onClick={() => window.location.href = '/login'}
                         className={`text-text-secondary hover:text-red-500 transition-colors ${isExpanded ? 'p-1' : 'hidden'}`}
                         aria-label="Sair"
+                        title="Sair"
                     >
                         <LogOut size={18} />
                     </button>

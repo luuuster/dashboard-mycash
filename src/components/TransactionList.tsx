@@ -16,7 +16,7 @@ export default function TransactionList() {
     return (
         <div className="bg-surface rounded-2xl shadow-sm border border-border overflow-hidden">
             <div className="p-6 border-b border-border">
-                <h2 className="text-xl font-bold text-text-primary">Transações Recentes</h2>
+                <h2 className="text-lg md:text-xl font-bold text-text-primary">Transações Recentes</h2>
             </div>
 
             <div className="overflow-x-auto">

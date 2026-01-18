@@ -18,7 +18,7 @@ export default function BalanceCard({ amount, growth }: BalanceCardProps) {
 
             <div className="relative z-10">
                 <span className="text-gray-400 text-xs md:text-sm font-medium tracking-wide">Saldo Total</span>
-                <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-2 tracking-tight">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2 tracking-tight">
                     {formatCurrency(animatedAmount)}
                 </h2>
             </div>
@@ -26,7 +26,7 @@ export default function BalanceCard({ amount, growth }: BalanceCardProps) {
             <div className="relative z-10 mt-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1F2937] rounded-full border border-white/5">
                     <TrendingUp size={14} className="text-lime-500" />
-                    <span className="text-xs font-bold text-white">+12% esse mês</span>
+                    <span className="text-xs font-bold text-white">+{growth}% esse mês</span>
                 </div>
             </div>
         </div>

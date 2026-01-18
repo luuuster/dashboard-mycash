@@ -20,7 +20,7 @@ export default function UpcomingExpenses() {
     return (
         <div className="bg-surface border border-border rounded-[32px] p-8 flex flex-col gap-6 shadow-sm h-full">
             <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-text-primary">Próximas Despesas</h2>
+                <h2 className="text-lg md:text-xl font-bold text-text-primary">Próximas Despesas</h2>
                 <span className="px-3 py-1 bg-red-50 text-red-500 text-[10px] font-bold rounded-full uppercase tracking-wider">
                     {internalTransactions.length} Pendentes
                 </span>

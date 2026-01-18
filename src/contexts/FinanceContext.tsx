@@ -28,6 +28,7 @@ interface FinanceContextType {
     addCreditCard: (card: Omit<CreditCard, 'id'>) => Promise<void>;
     addBankAccount: (account: Omit<BankAccount, 'id'>) => Promise<void>;
     addFamilyMember: (member: Omit<FamilyMember, 'id'>) => Promise<void>;
+    uploadFile: (file: File, bucket: 'avatars' | 'attachments') => Promise<string | null>;
     setSelectedMember: (memberId: string | null) => void;
     setDateRange: (range: DateRange | null) => void;
     setTransactionType: (type: 'all' | TransactionType) => void;
@@ -42,92 +43,13 @@ interface FinanceContextType {
 
 const FinanceContext = createContext<FinanceContextType | undefined>(undefined);
 
-// Advanced Mock Data - Fallback
-const mockMembers: FamilyMember[] = [
-    { id: '1', name: 'Franklin Vieira', role: 'Pai', avatarUrl: 'https://ui-avatars.com/api/?name=Franklin+V&background=84CC16&color=fff', monthlyIncome: 12000 },
-    { id: '2', name: 'Maria Silva', role: 'Mãe', avatarUrl: 'https://ui-avatars.com/api/?name=Maria+S&background=080B12&color=fff', monthlyIncome: 8500 },
-    { id: '3', name: 'João Vieira', role: 'Filho', avatarUrl: 'https://ui-avatars.com/api/?name=Joao+V&background=E5E7EB&color=080B12', monthlyIncome: 0 },
-];
-
-const mockCategories: Category[] = [
-    { id: '1', name: 'Salário', color: '#84CC16', type: 'income' },
-    { id: '2', name: 'Investimentos', color: '#A3E635', type: 'income' },
-    { id: '3', name: 'Freelance', color: '#D1D5DB', type: 'income' },
-    { id: '4', name: 'Alimentação', color: '#EF4444', type: 'expense' },
-    { id: '5', name: 'Habitação', color: '#3B82F6', type: 'expense' },
-    { id: '6', name: 'Transporte', color: '#F59E0B', type: 'expense' },
-    { id: '7', name: 'Lazer', color: '#8B5CF6', type: 'expense' },
-    { id: '8', name: 'Saúde', color: '#10B981', type: 'expense' },
-    { id: '9', name: 'Educação', color: '#6366F1', type: 'expense' },
-];
-
-const mockAccounts: BankAccount[] = [
-    { id: 'acc1', name: 'Nubank Conta', type: 'checking', balance: 4500.50, color: '#8A05BE', holderId: '1' },
-    { id: 'acc2', name: 'Itaú Personalité', type: 'checking', balance: 12800.00, color: '#EC7000', holderId: '1' },
-    { id: 'acc3', name: 'XP Investimentos', type: 'savings', balance: 45000.00, color: '#000000', holderId: '1' },
-];
-
-const mockCards: CreditCard[] = [
-    { id: 'card1', name: 'Nubank Ultravioleta', closingDay: 15, dueDay: 22, limit: 15000, currentBill: 3450.80, theme: 'black', lastDigits: '5897', holderId: '1' },
-    { id: 'card2', name: 'Itaú Visa Infinite', closingDay: 10, dueDay: 17, limit: 25000, currentBill: 1200.50, theme: 'lime', lastDigits: '1234', holderId: '2' },
-    { id: 'card3', name: 'Inter Mastercard', closingDay: 5, dueDay: 12, limit: 5000, currentBill: 450.00, theme: 'white', lastDigits: '9988', holderId: '1' },
-];
-
-const generateMockTransactions = (): Transaction[] => {
-    const transactions: Transaction[] = [];
-    const now = new Date();
-    transactions.push({ id: 't1', type: 'income', amount: 12000, description: 'Salário Franklin', category: 'Salário', date: new Date(now.getFullYear(), now.getMonth(), 5), accountId: 'acc2', memberId: '1', installments: 1, status: 'completed', isRecurring: true, isPaid: true });
-    transactions.push({ id: 't2', type: 'income', amount: 8500, description: 'Salário Maria', category: 'Salário', date: new Date(now.getFullYear(), now.getMonth(), 5), accountId: 'acc1', memberId: '2', installments: 1, status: 'completed', isRecurring: true, isPaid: true });
-    const expenseData = [
-        { desc: 'Supermercado Pão de Açúcar', cat: 'Alimentação', val: 450.80, day: 2, acc: 'card1', member: '2' },
-        { desc: 'Aluguel Apartamento', cat: 'Habitação', val: 3500, day: 10, acc: 'acc2', member: '1' },
-        { desc: 'Posto Shell', cat: 'Transporte', val: 280, day: 12, acc: 'card2', member: '1' },
-        { desc: 'Restaurante Coco Bambu', cat: 'Alimentação', val: 320, day: 15, acc: 'card1', member: '1' },
-        { desc: 'Farmácia Raia', cat: 'Saúde', val: 125.50, day: 18, acc: 'acc1', member: '2' },
-        { desc: 'Netflix', cat: 'Lazer', val: 55.90, day: 20, acc: 'card1', member: null },
-        { desc: 'iFood', cat: 'Alimentação', val: 89, day: 21, acc: 'card1', member: '3' },
-        { desc: 'Academia', cat: 'Saúde', val: 150, day: 5, acc: 'acc1', member: '1' },
-        { desc: 'Energia Enel', cat: 'Habitação', val: 245.30, day: 15, acc: 'acc2', member: null },
-        { desc: 'Internet Vivo', cat: 'Habitação', val: 120, day: 10, acc: 'acc2', member: null },
-        { desc: 'Uber Viagem', cat: 'Transporte', val: 45.20, day: 22, acc: 'card2', member: '3' },
-        { desc: 'Amazon Compra', cat: 'Lazer', val: 299.90, day: 23, acc: 'card1', member: '1' },
-        { desc: 'Padaria Real', cat: 'Alimentação', val: 42.50, day: 24, acc: 'acc1', member: '2' },
-        { desc: 'Spotify', cat: 'Lazer', val: 34.90, day: 25, acc: 'card3', member: '3' },
-        { desc: 'Escola João', cat: 'Educação', val: 1800, day: 1, acc: 'acc2', member: '1' },
-    ];
-    expenseData.forEach((ex, i) => {
-        transactions.push({
-            id: `te${i}`,
-            type: 'expense',
-            amount: ex.val,
-            description: ex.desc,
-            category: ex.cat,
-            date: new Date(now.getFullYear(), now.getMonth(), ex.day),
-            accountId: ex.acc,
-            memberId: ex.member,
-            installments: 1,
-            status: 'completed',
-            isRecurring: ex.day === 10 || ex.day === 20,
-            isPaid: true
-        });
-    });
-    return transactions;
-};
-
-const mockTransactions = generateMockTransactions();
-const mockGoals: Goal[] = [
-    { id: 'g1', name: 'Reserva de Emergência', targetAmount: 50000, currentAmount: 32500, deadline: new Date(2026, 11, 31), color: '#84CC16', memberId: '1' },
-    { id: 'g2', name: 'Viagem Disney', targetAmount: 25000, currentAmount: 8400, deadline: new Date(2026, 6, 15), color: '#3B82F6', memberId: null },
-    { id: 'g3', name: 'Novo iPhone 16', targetAmount: 8500, currentAmount: 2100, deadline: new Date(2026, 9, 20), color: '#F59E0B', memberId: '3' },
-];
-
 export function FinanceProvider({ children }: { children: ReactNode }) {
-    const [transactions, setTransactions] = useState<Transaction[]>(mockTransactions);
-    const [goals, setGoals] = useState<Goal[]>(mockGoals);
-    const [creditCards, setCreditCards] = useState<CreditCard[]>(mockCards);
-    const [bankAccounts, setBankAccounts] = useState<BankAccount[]>(mockAccounts);
-    const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>(mockMembers);
-    const [categories, setCategories] = useState<Category[]>(mockCategories);
+    const [transactions, setTransactions] = useState<Transaction[]>([]);
+    const [goals, setGoals] = useState<Goal[]>([]);
+    const [creditCards, setCreditCards] = useState<CreditCard[]>([]);
+    const [bankAccounts, setBankAccounts] = useState<BankAccount[]>([]);
+    const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>([]);
+    const [categories, setCategories] = useState<Category[]>([]);
     const [loading, setLoading] = useState(false);
     const [filters, setFilters] = useState<GlobalFilters>({
         selectedMember: null,
@@ -155,12 +77,12 @@ export function FinanceProvider({ children }: { children: ReactNode }) {
                 supabase.from('categories').select('*')
             ]);
 
-            if (txs && txs.length > 0) setTransactions(txs as Transaction[]);
-            if (gs && gs.length > 0) setGoals(gs as Goal[]);
-            if (cards && cards.length > 0) setCreditCards(cards as CreditCard[]);
-            if (accs && accs.length > 0) setBankAccounts(accs as BankAccount[]);
-            if (members && members.length > 0) setFamilyMembers(members as FamilyMember[]);
-            if (cats && cats.length > 0) setCategories(cats as Category[]);
+            if (txs) setTransactions(txs as Transaction[]);
+            if (gs) setGoals(gs as Goal[]);
+            if (cards) setCreditCards(cards as CreditCard[]);
+            if (accs) setBankAccounts(accs as BankAccount[]);
+            if (members) setFamilyMembers(members as FamilyMember[]);
+            if (cats) setCategories(cats as Category[]);
         } catch (error) {
             console.error('Erro ao buscar dados do Supabase:', error);
         } finally {
@@ -170,57 +92,77 @@ export function FinanceProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         refreshData();
+
+        // Setup Realtime Subscription
+        const channels = supabase.channel('custom-all-channel')
+            .on(
+                'postgres_changes',
+                { event: '*', schema: 'public' },
+                () => {
+                    refreshData();
+                }
+            )
+            .subscribe();
+
+        return () => {
+            supabase.removeChannel(channels);
+        }
     }, []);
 
-    const addTransaction = async (transaction: Omit<Transaction, 'id'>) => {
-        const { data, error } = await supabase.from('transactions').insert([transaction]).select();
-        if (error) {
-            console.error('Erro ao adicionar transação:', error);
-            // Fallback: adicionar localmente com ID temporário
-            setTransactions(prev => [{ ...transaction, id: crypto.randomUUID() }, ...prev]);
-        } else if (data) {
-            setTransactions(prev => [data[0] as Transaction, ...prev]);
+    const uploadFile = async (file: File, bucket: 'avatars' | 'attachments') => {
+        try {
+            const fileName = `${Date.now()}-${file.name}`;
+            const { data, error } = await supabase.storage.from(bucket).upload(fileName, file);
+            if (error) throw error;
+
+            const { data: { publicUrl } } = supabase.storage.from(bucket).getPublicUrl(fileName);
+            return publicUrl;
+        } catch (error) {
+            console.error('Erro ao fazer upload:', error);
+            return null;
         }
+    };
+
+    const addTransaction = async (transaction: Omit<Transaction, 'id'>) => {
+        const { error } = await supabase.from('transactions').insert([transaction]);
+        if (error) console.error('Erro ao adicionar transação:', error);
+        else refreshData();
     };
 
     const updateTransaction = async (id: string, updates: Partial<Transaction>) => {
         const { error } = await supabase.from('transactions').update(updates).eq('id', id);
-        if (error) {
-            console.error('Erro ao atualizar transação:', error);
-        }
-        setTransactions(prev => prev.map(t => t.id === id ? { ...t, ...updates } : t));
+        if (error) console.error('Erro ao atualizar transação:', error);
+        else refreshData();
     };
 
     const deleteTransaction = async (id: string) => {
         const { error } = await supabase.from('transactions').delete().eq('id', id);
-        if (error) {
-            console.error('Erro ao deletar transação:', error);
-        }
-        setTransactions(prev => prev.filter(t => t.id !== id));
+        if (error) console.error('Erro ao deletar transação:', error);
+        else refreshData();
     };
 
     const addGoal = async (goal: Omit<Goal, 'id'>) => {
-        const { data, error } = await supabase.from('goals').insert([goal]).select();
+        const { error } = await supabase.from('goals').insert([goal]);
         if (error) console.error('Erro ao adicionar meta:', error);
-        else if (data) setGoals(prev => [...prev, data[0] as Goal]);
+        else refreshData();
     };
 
     const addCreditCard = async (card: Omit<CreditCard, 'id'>) => {
-        const { data, error } = await supabase.from('credit_cards').insert([card]).select();
+        const { error } = await supabase.from('credit_cards').insert([card]);
         if (error) console.error('Erro ao adicionar cartão:', error);
-        else if (data) setCreditCards(prev => [...prev, data[0] as CreditCard]);
+        else refreshData();
     };
 
     const addBankAccount = async (account: Omit<BankAccount, 'id'>) => {
-        const { data, error } = await supabase.from('bank_accounts').insert([account]).select();
+        const { error } = await supabase.from('bank_accounts').insert([account]);
         if (error) console.error('Erro ao adicionar conta:', error);
-        else if (data) setBankAccounts(prev => [...prev, data[0] as BankAccount]);
+        else refreshData();
     };
 
     const addFamilyMember = async (member: Omit<FamilyMember, 'id'>) => {
-        const { data, error } = await supabase.from('family_members').insert([member]).select();
+        const { error } = await supabase.from('family_members').insert([member]);
         if (error) console.error('Erro ao adicionar membro:', error);
-        else if (data) setFamilyMembers(prev => [...prev, data[0] as FamilyMember]);
+        else refreshData();
     };
 
     const setSelectedMember = (memberId: string | null) => setFilters(prev => ({ ...prev, selectedMember: memberId }));
@@ -269,7 +211,7 @@ export function FinanceProvider({ children }: { children: ReactNode }) {
         transactions, goals, creditCards, bankAccounts, familyMembers, categories, filters, loading,
         addTransaction, updateTransaction, deleteTransaction, addGoal, addCreditCard, addBankAccount, addFamilyMember,
         setSelectedMember, setDateRange, setTransactionType, setSearchText, refreshData, getFilteredTransactions,
-        calculateTotalBalance, calculateIncomeForPeriod, calculateExpensesForPeriod, calculateExpensesByCategory
+        calculateTotalBalance, calculateIncomeForPeriod, calculateExpensesForPeriod, calculateExpensesByCategory, uploadFile
     };
 
     return <FinanceContext.Provider value={value}>{children}</FinanceContext.Provider>;

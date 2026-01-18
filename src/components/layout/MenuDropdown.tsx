@@ -67,7 +67,10 @@ export default function MenuDropdown({ isOpen, onClose, currentPath }: MenuDropd
                     </nav>
 
                     <footer className="mt-6 pt-6 border-t border-border">
-                        <button className="w-full flex items-center gap-4 px-4 py-4 rounded-xl text-red-500 font-medium hover:bg-red-50 transition-all">
+                        <button
+                            onClick={() => window.location.href = '/login'}
+                            className="w-full flex items-center gap-4 px-4 py-4 rounded-xl text-red-500 font-medium hover:bg-red-50 transition-all"
+                        >
                             <LogOut size={20} />
                             <span>Sair</span>
                         </button>
