@@ -14,22 +14,30 @@ export default function FinancialFlowChart() {
     const { transactions } = useFinance();
 
     const data = useMemo(() => {
-        const months = ['Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez', 'Jan'];
-        // Using same mock data logic as before
-        return months.map((month, index) => {
-            const mockValues = [
-                { income: 15400, expense: 12200 },
-                { income: 18200, expense: 14500 },
-                { income: 16800, expense: 13100 },
-                { income: 21000, expense: 15800 },
-                { income: 19500, expense: 14200 },
-                { income: 20200, expense: 16500 },
-                { income: 20500, expense: 13450 },
-            ];
+        const today = new Date();
+        const last6Months = Array.from({ length: 6 }, (_, i) => {
+            const d = new Date(today.getFullYear(), today.getMonth() - (5 - i), 1);
+            return d;
+        });
+
+        return last6Months.map(date => {
+            const monthName = new Intl.DateTimeFormat('pt-BR', { month: 'short' }).format(date);
+            const monthKey = date.toISOString().slice(0, 7); // YYYY-MM
+
+            const monthTransactions = transactions.filter(t => t.date.startsWith(monthKey));
+
+            const income = monthTransactions
+                .filter(t => t.type === 'income')
+                .reduce((acc, curr) => acc + curr.amount, 0);
+
+            const expense = monthTransactions
+                .filter(t => t.type === 'expense')
+                .reduce((acc, curr) => acc + curr.amount, 0);
+
             return {
-                name: month,
-                receitas: mockValues[index].income,
-                despesas: mockValues[index].expense,
+                name: monthName.charAt(0).toUpperCase() + monthName.slice(1),
+                receitas: income,
+                despesas: expense,
             };
         });
     }, [transactions]);
