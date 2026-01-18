@@ -1,81 +1,80 @@
-<<<<<<< HEAD
-# React + Vite
-=======
-# React + TypeScript + Vite
->>>>>>> 7944a6862327ce565e5d0adb92f50e4ec2f27d69
+# MyCash+ Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O MyCash+ Dashboard é uma aplicação web moderna para gestão financeira pessoal e familiar, desenvolvida com foco em UX premium e performance.
 
-Currently, two official plugins are available:
+![Dashboard Preview](https://github.com/luuuster/dashboard-mycash/raw/main/public/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## React Compiler
+- **Frontend**: React 19, TypeScript 5.7
+- **Estilização**: Tailwind CSS 4.0
+- **Gráficos**: Recharts
+- **Ícones**: Lucide React
+- **Build Tool**: Vite 6
+- **Backend/Persistência**: Supabase
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Pré-requisitos
 
-## Expanding the ESLint configuration
+- Node.js 18+
+- NPM ou Yarn
+- Conta no [Supabase](https://supabase.com)
 
-<<<<<<< HEAD
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Instalação
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone o repositório:
+```bash
+git clone https://github.com/luuuster/dashboard-mycash.git
+cd dashboard-mycash
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instale as dependências:
+```bash
+npm install
 ```
->>>>>>> 7944a6862327ce565e5d0adb92f50e4ec2f27d69
+
+3. Configure as variáveis de ambiente:
+Crie um arquivo `.env` na raiz do projeto com suas credenciais do Supabase:
+
+```env
+VITE_SUPABASE_URL=sua_url_do_supabase
+VITE_SUPABASE_ANON_KEY=sua_chave_anonima
+```
+
+4. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+Acesse `http://localhost:5173` no seu navegador.
+
+## 🏗️ Build e Deploy
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+Os arquivos estáticos serão gerados na pasta `dist`.
+
+### Deploy na Vercel
+
+1. Instale a Vercel CLI: `npm i -g vercel`
+2. Execute `vercel` na raiz do projeto.
+3. Configure as variáveis de ambiente (`VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY`) no painel da Vercel.
+
+## 🎨 Estrutura de Pastas
+
+Consulte [ARCHITECTURE.md](./ARCHITECTURE.md) para detalhes técnicos sobre a estrutura e decisões de arquitetura.
+
+## 🤝 Contribuição
+
+1. Faça um Fork do projeto
+2. Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
