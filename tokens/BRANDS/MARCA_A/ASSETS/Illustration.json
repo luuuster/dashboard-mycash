@@ -1,0 +1,11 @@
+{
+  "jf": {
+    "imagens": {
+      "imagem1": {
+        "value": "imagem1",
+        "type": "asset",
+        "description": "Code: E847"
+      }
+    }
+  }
+}

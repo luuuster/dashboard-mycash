@@ -1,0 +1,8 @@
+{
+  "jf": {
+    "breakpoint": {
+      "value": "{jf.breakpoints.mobile}",
+      "type": "number"
+    }
+  }
+}

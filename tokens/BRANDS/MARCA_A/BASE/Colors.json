@@ -1,0 +1,71 @@
+{
+  "jf": {
+    "base": {
+      "neutral": {
+        "value": "#9AA5B1",
+        "type": "color",
+        "description": "Cool Gray"
+      },
+      "primary": {
+        "value": "hsla(13, 100%, 59%, 100%)",
+        "type": "color",
+        "description": "Deep Purple"
+      },
+      "secondary": {
+        "value": "hsla(195, 100%, 70%, 100%)",
+        "type": "color",
+        "description": "Coral Red"
+      },
+      "tertiary": {
+        "value": "hsla(39, 100%, 72%, 100%)",
+        "type": "color",
+        "description": "Mint Green"
+      },
+      "dataviz1": {
+        "value": "#f56565",
+        "type": "color",
+        "description": "Amber Orange"
+      },
+      "dataviz2": {
+        "value": "#ed8936",
+        "type": "color",
+        "description": "Emerald Green"
+      },
+      "dataviz3": {
+        "value": "#ecc94b",
+        "type": "color",
+        "description": "Sky Blue"
+      },
+      "dataviz4": {
+        "value": "#48bb78",
+        "type": "color",
+        "description": "Royal Blue"
+      },
+      "dataviz5": {
+        "value": "#38b2ac",
+        "type": "color",
+        "description": "Magenta Pink"
+      },
+      "dataviz6": {
+        "value": "#4299e1",
+        "type": "color",
+        "description": "Crimson Rose"
+      },
+      "dataviz7": {
+        "value": "#667eea",
+        "type": "color",
+        "description": "Bright Red"
+      },
+      "dataviz8": {
+        "value": "#9f7aea",
+        "type": "color",
+        "description": "Vivid Violet"
+      },
+      "dataviz9": {
+        "value": "#ed64a6",
+        "type": "color",
+        "description": "Vivid Violet"
+      }
+    }
+  }
+}

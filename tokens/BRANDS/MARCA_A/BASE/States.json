@@ -1,0 +1,372 @@
+{
+  "jf": {
+    "modifier-amount": {
+      "0": {
+        "value": "0",
+        "type": "Modifier"
+      },
+      "1": {
+        "value": "1",
+        "type": "Modifier"
+      },
+      "01": {
+        "value": "0.1",
+        "type": "Modifier"
+      },
+      "005": {
+        "value": "0.05",
+        "type": "Modifier"
+      },
+      "015": {
+        "value": "0.15",
+        "type": "Modifier"
+      },
+      "02": {
+        "value": "0.2",
+        "type": "Modifier"
+      },
+      "025": {
+        "value": "0.25",
+        "type": "Modifier"
+      },
+      "03": {
+        "value": "0.3",
+        "type": "Modifier"
+      },
+      "04": {
+        "value": "0.4",
+        "type": "Modifier"
+      },
+      "045": {
+        "value": "0.45",
+        "type": "Modifier"
+      },
+      "035": {
+        "value": "0.35",
+        "type": "Modifier"
+      },
+      "05": {
+        "value": "0.5",
+        "type": "Modifier"
+      },
+      "052": {
+        "value": "0.52",
+        "type": "Modifier"
+      },
+      "055": {
+        "value": "0.55",
+        "type": "Modifier"
+      },
+      "06": {
+        "value": "0.6",
+        "type": "Modifier"
+      },
+      "062": {
+        "value": "0.62",
+        "type": "Modifier"
+      },
+      "065": {
+        "value": "0.65",
+        "type": "Modifier"
+      },
+      "07": {
+        "value": "0.7",
+        "type": "Modifier"
+      },
+      "075": {
+        "value": "0.75",
+        "type": "Modifier"
+      },
+      "08": {
+        "value": "0.8",
+        "type": "Modifier"
+      },
+      "082": {
+        "value": "0.82",
+        "type": "Modifier"
+      },
+      "085": {
+        "value": "0.85",
+        "type": "Modifier"
+      },
+      "088": {
+        "value": "0.88",
+        "type": "Modifier"
+      },
+      "09": {
+        "value": "0.9",
+        "type": "Modifier"
+      }
+    },
+    "state": {
+      "hover": {
+        "value": "{jf.modifier-amount.035}",
+        "type": "State"
+      },
+      "selected": {
+        "value": "{jf.modifier-amount.02}",
+        "type": "State"
+      },
+      "focus": {
+        "value": "{jf.modifier-amount.02}",
+        "type": "State"
+      },
+      "opacity": {
+        "dragged": {
+          "value": "{jf.modifier-amount.05}",
+          "type": "opacity"
+        },
+        "disabled": {
+          "value": "{jf.modifier-amount.02}",
+          "type": "opacity"
+        }
+      }
+    },
+    "light": {
+      "state": {
+        "bg": {
+          "neutral": {
+            "weak": {
+              "value": "{jf.modifier-amount.085}",
+              "type": "State"
+            },
+            "moderate": {
+              "value": "{jf.modifier-amount.055}",
+              "type": "State"
+            },
+            "default": {
+              "value": "{jf.modifier-amount.0}",
+              "type": "State"
+            },
+            "strong": {
+              "value": "{jf.modifier-amount.065}",
+              "type": "State"
+            },
+            "contrast": {
+              "value": "{jf.modifier-amount.09}",
+              "type": "State"
+            }
+          },
+          "weak": {
+            "value": "{jf.modifier-amount.08}",
+            "type": "State"
+          },
+          "moderate": {
+            "value": "{jf.modifier-amount.04}",
+            "type": "State"
+          },
+          "default": {
+            "value": "{jf.modifier-amount.0}",
+            "type": "State"
+          },
+          "strong": {
+            "value": "{jf.modifier-amount.05}",
+            "type": "State"
+          },
+          "contrast": {
+            "value": "{jf.modifier-amount.08}",
+            "type": "State"
+          }
+        },
+        "fg": {
+          "neutral": {
+            "default": {
+              "value": "{jf.modifier-amount.0}",
+              "type": "State"
+            },
+            "weak": {
+              "value": "{jf.modifier-amount.06}",
+              "type": "State"
+            },
+            "moderate": {
+              "value": "{jf.modifier-amount.07}",
+              "type": "State"
+            },
+            "strong": {
+              "value": "{jf.modifier-amount.09}",
+              "type": "State"
+            },
+            "inverse": {
+              "value": "{jf.modifier-amount.09}",
+              "type": "State"
+            }
+          },
+          "default": {
+            "value": "{jf.modifier-amount.0}",
+            "type": "State"
+          },
+          "moderate": {
+            "value": "{jf.modifier-amount.055}",
+            "type": "State"
+          },
+          "strong": {
+            "value": "{jf.modifier-amount.08}",
+            "type": "State"
+          },
+          "inverse": {
+            "value": "{jf.modifier-amount.07}",
+            "type": "State"
+          }
+        },
+        "bd": {
+          "neutral": {
+            "weak": {
+              "value": "{jf.modifier-amount.04}",
+              "type": "State"
+            },
+            "moderate": {
+              "value": "{jf.modifier-amount.04}",
+              "type": "State"
+            },
+            "strong": {
+              "value": "{jf.modifier-amount.08}",
+              "type": "State"
+            },
+            "inverse": {
+              "value": "{jf.modifier-amount.08}",
+              "type": "State"
+            }
+          },
+          "default": {
+            "value": "{jf.modifier-amount.03}",
+            "type": "State"
+          },
+          "inverse": {
+            "value": "{jf.modifier-amount.05}",
+            "type": "State"
+          }
+        }
+      }
+    },
+    "dark": {
+      "state": {
+        "bg": {
+          "neutral": {
+            "weak": {
+              "value": "{jf.modifier-amount.09}",
+              "type": "State"
+            },
+            "moderate": {
+              "value": "{jf.modifier-amount.05}",
+              "type": "State"
+            },
+            "strong": {
+              "value": "{jf.modifier-amount.05}",
+              "type": "State"
+            },
+            "contrast": {
+              "value": "{jf.modifier-amount.085}",
+              "type": "State"
+            }
+          },
+          "weak": {
+            "value": "{jf.modifier-amount.07}",
+            "type": "State"
+          },
+          "moderate": {
+            "value": "{jf.modifier-amount.0}",
+            "type": "State"
+          },
+          "strong": {
+            "value": "{jf.modifier-amount.05}",
+            "type": "State"
+          }
+        },
+        "fg": {
+          "neutral": {
+            "weak": {
+              "value": "{jf.modifier-amount.04}",
+              "type": "State"
+            },
+            "moderate": {
+              "value": "{jf.modifier-amount.062}",
+              "type": "State"
+            },
+            "strong": {
+              "value": "{jf.modifier-amount.085}",
+              "type": "State"
+            },
+            "inverse": {
+              "value": "{jf.modifier-amount.085}",
+              "type": "State"
+            }
+          },
+          "default": {
+            "value": "{jf.modifier-amount.03}",
+            "type": "State"
+          },
+          "inverse": {
+            "value": "{jf.modifier-amount.05}",
+            "type": "State"
+          }
+        },
+        "bd": {
+          "neutral": {
+            "weak": {
+              "value": "{jf.modifier-amount.01}",
+              "type": "State"
+            },
+            "moderate": {
+              "value": "{jf.modifier-amount.05}",
+              "type": "State"
+            },
+            "strong": {
+              "value": "{jf.modifier-amount.07}",
+              "type": "State"
+            },
+            "inverse": {
+              "value": "{jf.modifier-amount.075}",
+              "type": "State"
+            }
+          },
+          "default": {
+            "value": "0.4",
+            "type": "State"
+          },
+          "inverse": {
+            "value": "0.3",
+            "type": "State"
+          }
+        }
+      }
+    },
+    "opacity": {
+      "transparent": {
+        "value": "{jf.modifier-amount.0}",
+        "type": "opacity"
+      },
+      "3small": {
+        "value": "{jf.modifier-amount.01}",
+        "type": "opacity"
+      },
+      "2small": {
+        "value": "{jf.modifier-amount.015}",
+        "type": "opacity"
+      },
+      "1small": {
+        "value": "{jf.modifier-amount.02}",
+        "type": "opacity"
+      },
+      "small": {
+        "value": "{jf.modifier-amount.03}",
+        "type": "opacity"
+      },
+      "medium": {
+        "value": "{jf.modifier-amount.05}",
+        "type": "opacity"
+      },
+      "large": {
+        "value": "{jf.modifier-amount.07}",
+        "type": "opacity"
+      },
+      "1large": {
+        "value": "{jf.modifier-amount.08}",
+        "type": "opacity"
+      },
+      "total": {
+        "value": "{jf.modifier-amount.1}",
+        "type": "opacity"
+      }
+    }
+  }
+}

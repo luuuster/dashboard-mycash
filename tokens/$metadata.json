@@ -1,0 +1,30 @@
+{
+  "tokenSetOrder": [
+    "G_BASE/Primitives",
+    "G_BASE/Foundations",
+    "BRANDS/MARCA_A/ASSETS/Icon",
+    "BRANDS/MARCA_A/ASSETS/Illustration",
+    "BRANDS/MARCA_A/BASE/Colors",
+    "BRANDS/MARCA_A/BASE/States",
+    "BRANDS/MARCA_A/BASE/Typefluid",
+    "BRANDS/MARCA_A/BASE/Typeset",
+    "BRANDS/MARCA_A/BASE/TypeSize",
+    "BRANDS/MARCA_A/BASE/Typography",
+    "BRANDS/MARCA_A/THEMES/LIGHT/SCHEME/Backgrounds",
+    "BRANDS/MARCA_A/THEMES/LIGHT/SCHEME/Foregrounds",
+    "BRANDS/MARCA_A/THEMES/LIGHT/Borders",
+    "BRANDS/MARCA_A/THEMES/LIGHT/Shadows",
+    "BRANDS/MARCA_A/THEMES/DARK/SCHEME/Backgrounds",
+    "BRANDS/MARCA_A/THEMES/DARK/SCHEME/Foregrounds",
+    "BRANDS/MARCA_A/THEMES/DARK/Borders",
+    "BRANDS/MARCA_A/THEMES/DARK/Shadows",
+    "BRANDS/PATTERNS/Backgrounds",
+    "BRANDS/PATTERNS/Foregrounds",
+    "BRANDS/PATTERNS/Borders",
+    "BRANDS/PATTERNS/Shadows",
+    "DESIGN_ONLY/BREAKPOINTS/md-screen",
+    "DESIGN_ONLY/BREAKPOINTS/mobile",
+    "DESIGN_ONLY/BREAKPOINTS/xl-screen",
+    "DESIGN_ONLY/BREAKPOINTS/xs-screen"
+  ]
+}

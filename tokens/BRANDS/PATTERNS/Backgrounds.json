@@ -1,0 +1,3928 @@
+{
+  "jf": {
+    "bg": {
+      "default": {
+        "neutral": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.neutral.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.neutral.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.neutral.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.neutral.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.neutral.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.neutral.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.neutral.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.neutral.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.neutral.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.neutral.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.neutral.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.neutral.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.neutral.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.neutral.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.neutral.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.neutral.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.neutral.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.neutral.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.neutral.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.neutral.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "primary": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.primary.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.primary.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.primary.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.primary.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.primary.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.primary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.primary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.primary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.primary.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.primary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.primary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.primary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.primary.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.primary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.primary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.primary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.primary.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.primary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.primary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.primary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "secondary": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.secondary.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.secondary.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.secondary.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.secondary.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.secondary.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.secondary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.secondary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.secondary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.secondary.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.secondary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.secondary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.secondary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.secondary.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.secondary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.secondary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.secondary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.secondary.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.secondary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.secondary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.secondary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tertiary": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.tertiary.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.tertiary.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.tertiary.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.tertiary.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.tertiary.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.tertiary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.tertiary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.tertiary.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.tertiary.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.tertiary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.tertiary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.tertiary.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.tertiary.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.tertiary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.tertiary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.tertiary.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.tertiary.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.tertiary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.tertiary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.tertiary.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sucess": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.sucess.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.sucess.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.sucess.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.sucess.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.sucess.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.sucess.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.sucess.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.sucess.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.sucess.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.sucess.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.sucess.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.sucess.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.sucess.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.sucess.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.sucess.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.sucess.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.sucess.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.sucess.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.sucess.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.sucess.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "critical": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.critical.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.critical.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.critical.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.critical.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.critical.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.critical.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.critical.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.critical.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.critical.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.critical.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.critical.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.critical.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.critical.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.critical.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.critical.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.critical.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.critical.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.critical.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.critical.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.critical.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "warning": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.warning.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.warning.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.warning.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.warning.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.warning.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.warning.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.warning.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.warning.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.warning.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.warning.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.warning.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.warning.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.warning.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.warning.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.warning.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.warning.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.warning.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.warning.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.warning.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.warning.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz1": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz1.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz1.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz1.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz1.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz1.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz1.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz1.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz1.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz1.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz1.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz1.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz1.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz1.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz1.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz1.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz1.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz1.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz1.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz1.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz1.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz2": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz2.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz2.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz2.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz2.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz2.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz2.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz2.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz2.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz2.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz2.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz2.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz2.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz2.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz2.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz2.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz2.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz2.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz2.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz2.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz2.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz3": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz3.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz3.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz3.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz3.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz3.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz3.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz3.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz3.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz3.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz3.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz3.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz3.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz3.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz3.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz3.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz3.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz3.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz3.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz3.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz3.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz4": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz4.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz4.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz4.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz4.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz4.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz4.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz4.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz4.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz4.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz4.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz4.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz4.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz4.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz4.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz4.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz4.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz4.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz4.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz4.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz4.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz5": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz5.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz5.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz5.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz5.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz5.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz5.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz5.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz5.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz5.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz5.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz5.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz5.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz5.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz5.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz5.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz5.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz5.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz5.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz5.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz5.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz6": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz6.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz6.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz6.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz6.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz6.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz6.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz6.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz6.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz6.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz6.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz6.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz6.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz6.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz6.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz6.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz6.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz6.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz6.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz6.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz6.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz7": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz7.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz7.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz7.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz7.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz7.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz7.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz7.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz7.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz7.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz7.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz7.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz7.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz7.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz7.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz7.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz7.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz7.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz7.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz7.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz7.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz8": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz8.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz8.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz8.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz8.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz8.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz8.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz8.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz8.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz8.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz8.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz8.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz8.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz8.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz8.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz8.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz8.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz8.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz8.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz8.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz8.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "dataviz9": {
+          "weak": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz9.weak}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz9.weak.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              },
+              "description": "hover = 0.35"
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz9.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz9.weak.enabled}",
+              "type": "color",
+              "description": "hover = 0.15",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "moderate": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz9.moderate}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz9.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz9.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz9.moderate.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz9.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz9.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz9.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz9.default.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "strong": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz9.strong}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz9.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz9.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz9.strong.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "enabled": {
+              "value": "{jf.scheme.bg.dataviz9.contrast}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{jf.bg.default.dataviz9.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.hover}",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "selected": {
+              "value": "{jf.bg.default.dataviz9.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.selected} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            },
+            "focus": {
+              "value": "{jf.bg.default.dataviz9.contrast.enabled}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "{jf.state.focus} ",
+                    "space": "hsl",
+                    "color": "{jf.black}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

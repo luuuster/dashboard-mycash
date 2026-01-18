@@ -1,0 +1,70 @@
+{
+  "jf": {
+    "font-size": {
+      "fluid": {
+        "display": {
+          "2gigantic": {
+            "value": "min( max( {jf.font-size.display.d-1.min}, {jf.font-size.display.d-1.fluid} ), {jf.font-size.display.d-1.max} )",
+            "type": "fontSizes"
+          },
+          "1gigantic": {
+            "value": "min( max( {jf.font-size.display.d-2.min}, {jf.font-size.display.d-2.fluid} ), {jf.font-size.display.d-2.max} )",
+            "type": "fontSizes"
+          },
+          "gigantic": {
+            "value": "min( max( {jf.font-size.display.d-3.min}, {jf.font-size.display.d-3.fluid} ), {jf.font-size.display.d-3.max} )",
+            "type": "fontSizes"
+          }
+        },
+        "title": {
+          "6large": {
+            "value": "min( max( {jf.font-size.title.h-1.min}, {jf.font-size.title.h-1.fluid} ), {jf.font-size.title.h-1.max} )",
+            "type": "fontSizes"
+          },
+          "5large": {
+            "value": "min( max( {jf.font-size.title.h-2.min}, {jf.font-size.title.h-2.fluid} ), {jf.font-size.title.h-2.max} )",
+            "type": "fontSizes"
+          },
+          "4large": {
+            "value": "min( max( {jf.font-size.title.h-3.min}, {jf.font-size.title.h-3.fluid} ), {jf.font-size.title.h-3.max} )",
+            "type": "fontSizes"
+          },
+          "3large": {
+            "value": "min( max( {jf.font-size.title.h-4.min}, {jf.font-size.title.h-4.fluid} ), {jf.font-size.title.h-4.max} )",
+            "type": "fontSizes"
+          },
+          "2large": {
+            "value": "min( max( {jf.font-size.title.h-5.min}, {jf.font-size.title.h-5.fluid} ), {jf.font-size.title.h-5.max} )",
+            "type": "fontSizes"
+          },
+          "1large": {
+            "value": "min( max( {jf.font-size.title.h-6.min}, {jf.font-size.title.h-6.fluid} ), {jf.font-size.title.h-6.max} )",
+            "type": "fontSizes"
+          },
+          "large": {
+            "value": "min( max( {jf.font-size.title.h-7.min}, {jf.font-size.title.h-7.fluid} ), {jf.font-size.title.h-7.max} )",
+            "type": "fontSizes"
+          },
+          "medium": {
+            "value": "min( max( {jf.font-size.title.h-8.min}, {jf.font-size.title.h-8.fluid} ), {jf.font-size.title.h-8.max} )",
+            "type": "fontSizes"
+          },
+          "small": {
+            "value": "min( max( {jf.font-size.title.h-9.min}, {jf.font-size.title.h-9.fluid} ), {jf.font-size.title.h-9.max} )",
+            "type": "fontSizes"
+          }
+        },
+        "paragraph": {
+          "3large": {
+            "value": "min( max( {jf.font-size.paragraph.p-7.min}, {jf.font-size.paragraph.p-7.fluid} ), {jf.font-size.paragraph.p-7.max} )",
+            "type": "fontSizes"
+          },
+          "2large": {
+            "value": "min( max( {jf.font-size.paragraph.p-6.min}, {jf.font-size.paragraph.p-6.fluid} ), {jf.font-size.paragraph.p-6.max} )",
+            "type": "fontSizes"
+          }
+        }
+      }
+    }
+  }
+}

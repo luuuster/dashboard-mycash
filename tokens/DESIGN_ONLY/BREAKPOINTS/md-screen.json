@@ -1,0 +1,8 @@
+{
+  "jf": {
+    "breakpoint": {
+      "value": "{jf.breakpoints.md-screen}",
+      "type": "number"
+    }
+  }
+}
